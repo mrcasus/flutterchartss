@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutterchartss/screens/homeScreen.dart';
+import 'package:custom_splash/custom_splash.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,19 +20,19 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      home: CustomSplash(
+        imagePath: 'assets/caps-product-pmsa.png',
+        //backGroundColor: Colors.deepOrange,
+        //backGroundColor: Color(0xfffc6042),
+        animationEffect: 'fade-in',
+        logoSize: 700,
+        home: HomeScreen(),
+        // customFunction: duringSplash,
+        duration: 2500,
+        type: CustomSplashType.StaticDuration,
+        // outputAndHome: op,
+      ),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

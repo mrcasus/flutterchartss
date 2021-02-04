@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:splash_screen_view/SplashScreenView.dart';
 import 'package:ff_navigation_bar/ff_navigation_bar.dart';
+import 'package:charts_flutter/flutter.dart' as charts;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,6 +39,27 @@ class _MyHomePageState extends State<MyHomePage> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
+    var data = [
+      Sales("Bakım Yapılan", 50),
+      Sales("Bakım Yapılmıyan", 30),
+    ];
+
+    var series = [
+      charts.Series(
+          domainFn: (Sales sales, _) => sales.day,
+          measureFn: (Sales sales, _) => sales.sold,
+          id: 'Sales',
+          data: data,
+          labelAccessorFn: (Sales sales, _) =>
+              '${sales.day}: ${sales.sold.toString()}')
+    ];
+
+    var chart = charts.PieChart(
+      series,
+      defaultRenderer: charts.ArcRendererConfig(
+          arcRendererDecorators: [charts.ArcLabelDecorator()]),
+    );
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -64,11 +86,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              'Demonstration',
-            ),
+            SizedBox(height: 300, child: chart),
           ],
         ),
       ),
@@ -107,4 +127,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+class Sales {
+  final String day;
+  final int sold;
+
+  Sales(this.day, this.sold);
 }

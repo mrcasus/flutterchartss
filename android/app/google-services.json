@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1014794038038",
+    "project_id": "fir-bakim",
+    "storage_bucket": "fir-bakim.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014794038038:android:e0f236be5909659a7b3e37",
+        "android_client_info": {
+          "package_name": "com.example.flutterchartss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014794038038-j6gf42nnqjgan6ti64f9dbjn0so8dh4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD507MM6T6VNj6-mcndNQml2SNMOQ5nFuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014794038038-j6gf42nnqjgan6ti64f9dbjn0so8dh4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             SizedBox(height: 300, child: chart),
           ],
-        ),
+                  ),
       ),
       bottomNavigationBar: FFNavigationBar(
         theme: FFNavigationBarTheme(

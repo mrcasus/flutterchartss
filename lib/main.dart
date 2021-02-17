@@ -85,13 +85,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            SizedBox(height: 300, child: chart),
-          ],
-                  ),
-      ),
+          child: Column(
+        children: <Widget>[
+          SizedBox(height: 300, child: chart),
+        ],
+      )),
       bottomNavigationBar: FFNavigationBar(
         theme: FFNavigationBarTheme(
           barBackgroundColor: Colors.white,

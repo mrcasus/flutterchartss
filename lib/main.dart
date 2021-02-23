@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
         items: [
           FFNavigationBarItem(
             iconData: FontAwesomeIcons.home,
-            label: 'Home',
+            label: 'Homesdsdsdsd',
           ),
           FFNavigationBarItem(
             iconData: FontAwesomeIcons.clipboardList,
